@@ -1,0 +1,95 @@
+---
+title: 'Créer un bouton "connect wallet" avec React + Web3.js + Bootstrap'
+excerpt: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Praesent elementum facilisis leo vel fringilla est ullamcorper eget. At imperdiet dui accumsan sit amet nulla facilities morbi tempus.'
+coverImage: '/assets/blog/creer-connect-wallet-bouton-react-web3js-bootstrap/cover.jpg'
+date: '2022-07-13T05:35:07.322Z'
+author:
+  name: Geoffrey
+  picture: '/assets/blog/authors/geof.jpeg'
+ogImage:
+  url: '/assets/blog/preview/cover.jpg'
+---
+# The main content
+Je vais vous apprendre à créer un bouton qui interagira avec MetaMask pour permettre à l'utilisateur de connecter son portefeuille sur votre application.
+
+`npx create-react-app wallet-connect
+cd wallet-connect`
+
+Vérifiez la version de react-scripts dans le package.json, la version doit être 4.0.3 pour être compatible avec web3.js.
+
+Exécutez cette ligne de commande pour installer tout ce dont nous avons besoin :
+
+`yarn add web3 react-bootstrap bootstrap react-bootstrap-icons`
+
+Ajouter cette ligne dans index.js :
+
+```javascript
+import 'bootstrap/dist/css/bootstrap.css';
+```
+
+Fichier final App.js :
+```javascript
+import React from 'react';
+import Web3 from "web3";
+import { Button } from 'react-bootstrap';
+import { Wallet } from 'react-bootstrap-icons';
+import './App.css';
+
+class App extends React.Component {
+
+  constructor(props) {
+    super(props);
+    this.state = {
+      web3: null,
+      currentAccount: null,
+      ethBalance: 0,
+      networkId: null
+    };
+  }
+
+  componentDidMount = async () => {
+    this.connectWalletHandler();
+  };
+
+  connectWalletHandler = async () => {
+    try {
+      const web3 = new Web3(Web3.givenProvider);
+      this.setState({ web3: web3});
+      const accounts = await web3.eth.requestAccounts();
+      if (accounts.length !== 0) {
+        const networkId = await web3.eth.net.getId();
+        const ethBalance = await web3.eth.getBalance(accounts[0]);
+        this.setState({currentAccount: accounts[0], ethBalance: Web3.utils.fromWei(ethBalance), networkId: networkId});
+      }
+    } catch (error) {
+      console.error(error);
+    }
+  }
+
+  connectedWallet = () => {
+    return (
+      <div>
+        <p>{parseFloat(this.state.ethBalance).toFixed(4)} ETH</p>
+        <p>{this.state.currentAccount.slice(0,5)+'...'+this.state.currentAccount.slice(38,42)}<br />WALLET CONNECTED</p>
+      </div>
+    )
+  }
+
+  connectWalletButton = () => {
+    return (
+      <Button variant="outline-primary" onClick={() => this.connectWalletHandler()}><Wallet />&ensp;Connect wallet</Button>
+    )
+  }
+
+  render() {
+    return (
+      <div className="App">
+         {this.state.currentAccount ? this.connectedWallet() : this.connectWalletButton()}
+      </div>
+    );
+  }
+}
+
+export default App;
+```
+
