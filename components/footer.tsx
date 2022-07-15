@@ -11,7 +11,7 @@ const Footer = () => {
                 <img src="/assets/logo.svg" className="mr-3 h-8" alt="Independence DEV Logo"/>
               </a>
             </div>
-            <div className="grid grid-cols-2 gap-8 sm:gap-6 sm:grid-cols-3">
+            <div className="grid grid-cols-2 gap-20 sm:gap-20 sm:grid-cols-2">
               <div>
                 <h2 className="mb-6 text-sm font-semibold text-gray-900 uppercase dark:text-white">Ressources</h2>
                 <ul className="text-gray-600 dark:text-gray-400">
@@ -33,17 +33,6 @@ const Footer = () => {
                   </li>
                   <li>
                     <a href="https://twitter.com/geof_dev" className="hover:underline">Twitter</a>
-                  </li>
-                </ul>
-              </div>
-              <div>
-                <h2 className="mb-6 text-sm font-semibold text-gray-900 uppercase dark:text-white">Légal</h2>
-                <ul className="text-gray-600 dark:text-gray-400">
-                  <li className="mb-4">
-                    <a href="https://formations.independence-dev.com/privacy" className="hover:underline">Politique de confidentialité</a>
-                  </li>
-                  <li>
-                    <a href="https://formations.independence-dev.com/terms" className="hover:underline">Conditions générales</a>
                   </li>
                 </ul>
               </div>

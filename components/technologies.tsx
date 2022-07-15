@@ -40,17 +40,13 @@ const Technologies = () => {
                         <div
                             className="flex justify-center items-center mb-4 w-10 h-10 rounded-full bg-blue-100 lg:h-12 lg:w-12 dark:bg-blue-900">
                             <svg className="w-5 h-5 text-blue-600 lg:w-6 lg:h-6 dark:text-blue-300" fill="currentColor"
-                                 viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
-                                <path fillRule="evenodd"
-                                      d="M6 6V5a3 3 0 013-3h2a3 3 0 013 3v1h2a2 2 0 012 2v3.57A22.952 22.952 0 0110 13a22.95 22.95 0 01-8-1.43V8a2 2 0 012-2h2zm2-1a1 1 0 011-1h2a1 1 0 011 1v1H8V5zm1 5a1 1 0 011-1h.01a1 1 0 110 2H10a1 1 0 01-1-1z"
-                                      clipRule="evenodd"></path>
+                                 viewBox="0 0 576 512" xmlns="http://www.w3.org/2000/svg">
                                 <path
-                                    d="M2 13.692V16a2 2 0 002 2h12a2 2 0 002-2v-2.308A24.974 24.974 0 0110 15c-2.796 0-5.487-.46-8-1.308z"></path>
+                                    d="M287.1 0C305.7 0 320 14.33 320 32V160C320 177.7 305.7 192 287.1 192C270.3 192 255.1 177.7 255.1 160V109.3L54.63 310.6C42.13 323.1 21.87 323.1 9.372 310.6C-3.124 298.1-3.124 277.9 9.372 265.4L210.7 64H159.1C142.3 64 127.1 49.67 127.1 32C127.1 14.33 142.3 0 159.1 0H287.1zM576 80C576 106.5 554.5 128 528 128C501.5 128 480 106.5 480 80C480 53.49 501.5 32 528 32C554.5 32 576 53.49 576 80zM448 208C448 234.5 426.5 256 400 256C373.5 256 352 234.5 352 208C352 181.5 373.5 160 400 160C426.5 160 448 181.5 448 208zM352 336C352 309.5 373.5 288 400 288C426.5 288 448 309.5 448 336C448 362.5 426.5 384 400 384C373.5 384 352 362.5 352 336zM448 464C448 490.5 426.5 512 400 512C373.5 512 352 490.5 352 464C352 437.5 373.5 416 400 416C426.5 416 448 437.5 448 464zM576 464C576 490.5 554.5 512 528 512C501.5 512 480 490.5 480 464C480 437.5 501.5 416 528 416C554.5 416 576 437.5 576 464zM223.1 336C223.1 309.5 245.5 288 271.1 288C298.5 288 320 309.5 320 336C320 362.5 298.5 384 271.1 384C245.5 384 223.1 362.5 223.1 336zM320 464C320 490.5 298.5 512 271.1 512C245.5 512 223.1 490.5 223.1 464C223.1 437.5 245.5 416 271.1 416C298.5 416 320 437.5 320 464zM95.1 464C95.1 437.5 117.5 416 143.1 416C170.5 416 191.1 437.5 191.1 464C191.1 490.5 170.5 512 143.1 512C117.5 512 95.1 490.5 95.1 464zM576 336C576 362.5 554.5 384 528 384C501.5 384 480 362.5 480 336C480 309.5 501.5 288 528 288C554.5 288 576 309.5 576 336zM480 208C480 181.5 501.5 160 528 160C554.5 160 576 181.5 576 208C576 234.5 554.5 256 528 256C501.5 256 480 234.5 480 208z"></path>
                             </svg>
                         </div>
-                        <h3 className="mb-2 text-xl font-bold dark:text-white">Business Automation</h3>
-                        <p className="text-gray-500 dark:text-gray-400">Auto-assign tasks, send Slack messages, and much
-                            more. Now power up with hundreds of new templates to help you get started.</p>
+                        <h3 className="mb-2 text-xl font-bold dark:text-white">Évolutif</h3>
+                        <p className="text-gray-500 dark:text-gray-400">Le Web3 évolue très vite ! Pour être à jour sur les nouvelles technologies, de nouveaux contenus seront en ligne en permanance.</p>
                     </div>
                 </div>
             </div>
