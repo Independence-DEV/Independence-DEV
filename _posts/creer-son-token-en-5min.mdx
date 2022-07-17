@@ -9,5 +9,24 @@ author:
 ogImage:
     url: '/assets/blog/preview/cover.jpg'
 ---
-# The main content
-Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+# Le standard ERC20
+L'ERC20 introduit une norme pour les jetons fongibles, en d'autres termes, ils ont une propriété qui fait que chaque jeton est exactement le même (en type et en valeur) qu'un autre jeton. Par exemple, un jeton ERC20 se comporte exactement comme l'ETH, ce qui signifie qu'un jeton est et sera toujours égal à tous les autres jetons.
+
+## Les fonctions d'un Smart Contract ERC20
+```
+function name() public view returns (string)
+function symbol() public view returns (string)
+function decimals() public view returns (uint8)
+function totalSupply() public view returns (uint256)
+function balanceOf(address _owner) public view returns (uint256 balance)
+function transfer(address _to, uint256 _value) public returns (bool success)
+function transferFrom(address _from, address _to, uint256 _value) public returns (bool success)
+function approve(address _spender, uint256 _value) public returns (bool success)
+function allowance(address _owner, address _spender) public view returns (uint256 remaining)
+```
+
+
+
+
+
+

@@ -1,6 +1,12 @@
 module.exports = {
   darkMode: 'class',
-  content: ['./components/**/*.tsx', './pages/**/*.tsx', './node_modules/flowbite/**/*.js', './node_modules/flowbite-react/**/*.{js,jsx,ts,tsx}'],
+  content: [
+    './components/**/*.tsx',
+    './pages/**/*.tsx',
+    './public/**/*.html',
+    './node_modules/flowbite/**/*.js',
+    './node_modules/flowbite-react/**/*.js',
+  ],
   theme: {
     extend: {
       colors: {
