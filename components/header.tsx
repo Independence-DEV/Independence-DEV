@@ -5,7 +5,7 @@ import {Button, Navbar} from "flowbite-react";
 const Header = () => {
     const router = useRouter();
   return (
-      <header>
+      <header className="mx-auto max-w-screen-xl">
               <Navbar rounded={true}>
                   <Navbar.Brand href="/">
                       <img src="/assets/logo.svg" className="mr-3 h-6 sm:h-9" alt="Independence DEV Logo"/>
