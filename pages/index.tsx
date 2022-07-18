@@ -23,7 +23,7 @@ export default function Index({ allPosts }: Props) {
     <>
       <Layout>
         <Head>
-          <title>{CMS_NAME} - Code Your Freedom</title>
+          <title>{CMS_NAME} - Deviens Développeur Web3</title>
         </Head>
         <Container>
           <Header />

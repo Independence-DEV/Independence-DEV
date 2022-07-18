@@ -11,7 +11,7 @@ const Footer = () => {
                 <img src="/assets/logo.svg" className="mr-3 h-8" alt="Independence DEV Logo"/>
               </a>
             </div>
-            <div className="grid grid-cols-2 gap-20 sm:gap-20 sm:grid-cols-2">
+            <div className="grid grid-cols-2 gap-8 sm:gap-6 sm:grid-cols-3">
               <div>
                 <h2 className="mb-6 text-sm font-semibold text-gray-900 uppercase dark:text-white">Ressources</h2>
                 <ul className="text-gray-600 dark:text-gray-400">
@@ -33,6 +33,17 @@ const Footer = () => {
                   </li>
                   <li>
                     <a href="https://twitter.com/geof_dev" className="hover:underline">Twitter</a>
+                  </li>
+                </ul>
+              </div>
+              <div>
+                <h2 className="mb-6 text-sm font-semibold text-gray-900 uppercase dark:text-white">Liens affiliés</h2>
+                <ul className="text-gray-600 dark:text-gray-400">
+                  <li className="mb-4">
+                      <a href="https://www.coinbase.com/join/bernic_9s" className="hover:underline">Reçois $10 en Bitcoin</a>
+                  </li>
+                  <li>
+                    <a href="https://www.binance.com/fr/activity/referral/offers/claim?ref=CPA_00E99Z7FID" className="hover:underline">100 USDT offert</a>
                   </li>
                 </ul>
               </div>

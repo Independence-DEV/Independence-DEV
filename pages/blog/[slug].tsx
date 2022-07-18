@@ -36,6 +36,7 @@ export default function Post({ post, morePosts, preview }: Props) {
                 title={post.title}
                 coverImage={post.coverImage}
                 date={post.date}
+                youtube={post.youtube}
                 excerpt={post.excerpt}
                 author={post.author}
             />
@@ -72,6 +73,7 @@ export async function getStaticProps({ params }: Params) {
     'date',
     'slug',
     'excerpt',
+    'youtube',
     'author',
     'content',
     'ogImage',
