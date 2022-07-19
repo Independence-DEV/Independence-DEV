@@ -40,7 +40,7 @@ const Footer = () => {
                 <h2 className="mb-6 text-sm font-semibold text-gray-900 uppercase dark:text-white">Liens affiliés</h2>
                 <ul className="text-gray-600 dark:text-gray-400">
                   <li className="mb-4">
-                      <a href="https://www.coinbase.com/join/bernic_9s" className="hover:underline">Reçois $10 en Bitcoin</a>
+                      <a href="https://www.coinbase.com/fr/join/bernic_9s" className="hover:underline">Reçois $10 en Bitcoin</a>
                   </li>
                   <li>
                     <a href="https://www.binance.com/fr/activity/referral/offers/claim?ref=CPA_00E99Z7FID" className="hover:underline">100 USDT offert</a>
