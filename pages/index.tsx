@@ -3,7 +3,6 @@ import HeroPost from '../components/hero-post'
 import Layout from '../components/layout'
 import { getAllPosts } from '../lib/api'
 import Head from 'next/head'
-import { CMS_NAME } from '../lib/constants'
 import Post from '../interfaces/post'
 import Header from "../components/header";
 import Companies from "../components/companies";
@@ -20,7 +19,7 @@ export default function Index({ allPosts }: Props) {
     <>
       <Layout>
         <Head>
-          <title>{CMS_NAME} - Deviens Développeur Web3</title>
+          <title>Independence DEV - Deviens Développeur Web3</title>
         </Head>
         <Container>
           <Header />
