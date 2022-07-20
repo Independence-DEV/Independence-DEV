@@ -4,16 +4,19 @@ excerpt: 'Tout veut créer ton propre Token mais tu ne sais pas comment ? Avec d
 coverImage: '/assets/blog/creer-son-token-en-5min/cover.jpg'
 date: '2022-07-01T05:35:07.322Z'
 youtube: 'https://www.youtube.com/watch?v=E34HjgTa_tk'
-author:
-    name: Geoffrey
-    picture: '/assets/blog/authors/geof.jpeg'
 ogImage:
     url: '/assets/blog/preview/cover.jpg'
 ---
-# Le standard ERC20
+## Le standard ERC20
 L'ERC20 introduit une norme pour les jetons fongibles, en d'autres termes, ils ont une propriété qui fait que chaque jeton est exactement le même (en type et en valeur) qu'un autre jeton. Par exemple, un jeton ERC20 se comporte exactement comme l'ETH, ce qui signifie qu'un jeton est et sera toujours égal à tous les autres jetons.
 
-## Les fonctions d'un Smart Contract ERC20
+## Le Smart Contract ERC20
+
+Vous pouvez retrouver le code ERC20 d'OpenZeppelin ici :
+
+[https://github.com/OpenZeppelin/openzeppelin-contracts/blob/master/contracts/token/ERC20/ERC20.sol](https://github.com/OpenZeppelin/openzeppelin-contracts/blob/master/contracts/token/ERC20/ERC20.sol)
+
+### Les fonctions
 ```
 function name() public view returns (string)
 function symbol() public view returns (string)
@@ -26,8 +29,41 @@ function approve(address _spender, uint256 _value) public returns (bool success)
 function allowance(address _owner, address _spender) public view returns (uint256 remaining)
 ```
 
+## l'IDE Remix
 
+Remix est un IDE en ligne pour Smart Contracts. Il va nous permettre d'éditer le code Solidity et de pouvoir déployer simplement notre smart contract.
 
+Pour y acceder : [https://remix.ethereum.org](https://remix.ethereum.org/)
 
+### Créer le Workspace
 
+Remix permet de creer directement un projet OpenZeppelin ERC20.
+![](../assets/blog/creer-son-token-en-5min/remix.png)
+Cela a dû vous créer le fichier suivant (contracts/SampleERC20.sol) :
+```
+// SPDX-License-Identifier: GPL-3.0
 
+pragma solidity >=0.7.0 <0.9.0;
+
+import "@openzeppelin/contracts/token/ERC20/ERC20.sol";
+
+/**
+ * @title SampleERC20
+ * @dev Create a sample ERC20 standard token
+ */
+contract SampleERC20 is ERC20 {
+
+    constructor(string memory tokenName, string memory tokenSymbol) ERC20(tokenName, tokenSymbol) {}
+}
+```
+Ce Smart Contract va créer le token ERC20 avec le nom et symbol du token passe dans le constructeur.
+
+### Compiler le code
+Se rendre sur le troisieme onglet a gauche et compiler le Smart Contract "SampleERC20.sol"
+![](../assets/blog/creer-son-token-en-5min/compile.png)
+
+### Déployer le smart contract
+- Choisir "Injected Provider" pour utiliser un de vos wallet MetaMask.
+- Selectionner le bon Smart Contract (SampleERC20).
+- Remplir le nom et le symbol du token puis cliquer sur transact.
+![](../assets/blog/creer-son-token-en-5min/deploy.png)

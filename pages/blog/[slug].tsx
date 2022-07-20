@@ -15,17 +15,15 @@ import Formation from "../../components/formation";
 
 type Props = {
   post: PostType
-  morePosts: PostType[]
-  preview?: boolean
 }
 
-export default function Post({ post, morePosts, preview }: Props) {
+export default function Post({ post }: Props) {
   const router = useRouter()
   if (!router.isFallback && !post?.slug) {
     return <ErrorPage statusCode={404} />
   }
   return (
-    <Layout preview={preview}>
+    <Layout>
       <Container>
         <Header />
         {router.isFallback ? (
@@ -38,7 +36,6 @@ export default function Post({ post, morePosts, preview }: Props) {
                 date={post.date}
                 youtube={post.youtube}
                 excerpt={post.excerpt}
-                author={post.author}
             />
             <div className="bg-gray-50 dark:bg-gray-800">
               <div className="max-w-screen-xl sm:text-xl mx-auto py-5">
@@ -74,7 +71,6 @@ export async function getStaticProps({ params }: Params) {
     'slug',
     'excerpt',
     'youtube',
-    'author',
     'content',
     'ogImage',
     'coverImage',

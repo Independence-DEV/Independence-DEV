@@ -1,9 +1,4 @@
-import Avatar from './avatar'
 import DateFormatter from './date-formatter'
-import CoverImage from './cover-image'
-import PostTitle from './post-title'
-import type Author from '../interfaces/author'
-import post from "../interfaces/post";
 
 type Props = {
   title: string
@@ -11,10 +6,9 @@ type Props = {
   date: string
   youtube: string
   excerpt: string
-  author: Author
 }
 
-const PostHeader = ({ title, coverImage, date, youtube, excerpt, author }: Props) => {
+const PostHeader = ({ title, coverImage, date, youtube, excerpt }: Props) => {
   return (
     <>
         <section className="text-gray-400 bg-gray-900 body-font">
