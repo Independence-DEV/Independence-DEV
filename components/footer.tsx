@@ -32,7 +32,7 @@ const Footer = () => {
                     <a href="https://twitter.com/geof_dev" className="hover:underline">Twitter</a>
                   </li>
                   <li>
-                    <a href="https://www.youtube.com/c/IndependenceDEV" className="hover:underline ">YouTube</a>
+                    <a href="https://www.youtube.com/c/IndependenceDEV?sub_confirmation=1" className="hover:underline ">YouTube</a>
                   </li>
                 </ul>
               </div>
