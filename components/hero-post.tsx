@@ -6,8 +6,8 @@ const HeroPost = () => {
             <h1 className="max-w-2xl mb-4 text-4xl font-extrabold leading-none md:text-5xl xl:text-6xl dark:text-white">Deviens Développeur Web3</h1>
             <p className="max-w-2xl mb-6 font-light text-gray-500 lg:mb-8 md:text-lg lg:text-xl dark:text-gray-400">
               Je m'appelle Geoffrey, je suis développeur Web depuis plus de 6 ans et ai basculé à 100% sur le dev Web3 depuis 1 an.<br/>
-              La période actuelle que connait l'univers de la crypto (Bear market) est le parfait moment pour monter en compétences avant le prochain Bull Market ne louper aucune opportunité.<br/>
-              Rendez-vous de l'autre coté.🚀
+              La période actuelle que connait l'univers de la crypto (Bear market) est le parfait moment pour monter en compétences avant le prochain Bull Market pour ne louper aucune opportunité.<br/>
+              Rendez-vous de l'autre coté 🚀
             </p>
             <a href="https://formations.independence-dev.com/"
                className="inline-flex items-center justify-center px-5 py-3 mr-3 text-base font-medium text-center text-white rounded-lg bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:ring-blue-300 dark:focus:ring-blue-900">
