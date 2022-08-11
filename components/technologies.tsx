@@ -22,7 +22,7 @@ const Technologies = () => {
                             </svg>
                         </div>
                         <h3 className="mb-2 text-xl font-bold dark:text-white">Communauté</h3>
-                        <p className="text-gray-500 dark:text-gray-400">Vous aurez accès à un Discord privé réservez aux apprenants et aux instructeurs. Obtiens de l'aide d'autres développeurs si besoin.</p>
+                        <p className="text-gray-500 dark:text-gray-400">Vous aurez accès à un Discord privé, réservez aux apprenants et aux instructeurs. Obtiens de l'aide d'autres développeurs si besoin.</p>
                     </div>
                     <div>
                         <div
@@ -34,7 +34,7 @@ const Technologies = () => {
                             </svg>
                         </div>
                         <h3 className="mb-2 text-xl font-bold dark:text-white">Formations</h3>
-                        <p className="text-gray-500 dark:text-gray-400">Plusieurs formations sont/seront disponible en fonction de tes besoins. Les formations sont mise à jour pour suivre les évolutions du Web3.</p>
+                        <p className="text-gray-500 dark:text-gray-400">Plusieurs formations sont/seront disponibles en fonction de tes besoins. Les formations sont mise à jour pour suivre les évolutions du Web3.</p>
                     </div>
                     <div>
                         <div
@@ -46,7 +46,7 @@ const Technologies = () => {
                             </svg>
                         </div>
                         <h3 className="mb-2 text-xl font-bold dark:text-white">Évolutif</h3>
-                        <p className="text-gray-500 dark:text-gray-400">Le Web3 évolue très vite ! Pour être à jour sur les nouvelles technologies, de nouveaux contenus seront en ligne en permanance.</p>
+                        <p className="text-gray-500 dark:text-gray-400">Le Web3 évolue très vite ! Pour être à jour sur les nouvelles technologies, de nouveaux contenus seront en ligne en permanence.</p>
                     </div>
                 </div>
             </div>

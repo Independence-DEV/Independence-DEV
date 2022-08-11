@@ -43,7 +43,7 @@ const Footer = () => {
                       <a href="https://www.coinbase.com/fr/join/bernic_9s" className="hover:underline">Reçois $10 en Bitcoin</a>
                   </li>
                   <li>
-                    <a href="https://www.binance.com/fr/activity/referral/offers/claim?ref=CPA_00E99Z7FID" className="hover:underline">100 USDT offert</a>
+                    <a href="https://www.binance.com/fr/activity/referral/offers/claim?ref=CPA_00E99Z7FID" className="hover:underline">100 USDT offerts</a>
                   </li>
                 </ul>
               </div>
