@@ -2,8 +2,8 @@
 title: 'Données hors Blockchain avec les Oracles Chainlink 🔮'
 excerpt: "Les Oracles permettent d'alimenter vos Smart Contracts avec des données disponibles hors Blockchain. Nous allons nous intéresser plus particulièrement aux Data Feeds de Chainlink."
 coverImage: '/assets/blog/les-oracles-avec-chainlink/cover.png'
-date: '2022-08-12T05:35:07.322Z'
-youtube: 'https://www.youtube.com/watch?v=BNwOwWsmpoA'
+date: '2022-09-21T05:35:07.322Z'
+youtube: 'https://www.youtube.com/watch?v=A03RxCqwd14'
 ogImage:
   url: '/assets/blog/preview/cover.jpg'
 ---
@@ -31,7 +31,7 @@ contract oracle {
     constructor(){
         priceFeed = AggregatorV3Interface(0x0567F2323251f0Aab15c8dFb1967E4e8A7D42aeE);
     }
-    function oracle(){
+    function bnbPrice() public view returns (int256){
         (,int256 price, , , ) = priceFeed.latestRoundData();
         return price;
     }
