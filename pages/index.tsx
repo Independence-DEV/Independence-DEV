@@ -8,6 +8,7 @@ import Header from "../components/header";
 import Companies from "../components/companies";
 import Technologies from "../components/technologies";
 import Blog from "../components/blog";
+import LastArticles from "../components/last-articles";
 
 type Props = {
   allPosts: Post[]
@@ -23,10 +24,10 @@ export default function Index({ allPosts }: Props) {
         </Head>
         <Container>
           <Header />
-            <HeroPost/>
+          <HeroPost/>
           <Companies />
           <Technologies />
-          <Blog posts={morePosts} />
+          <LastArticles posts={morePosts} />
         </Container>
       </Layout>
     </>

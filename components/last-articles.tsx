@@ -11,7 +11,7 @@ const Blog = ({ posts }: Props) => {
     return (
         <section className="bg-white dark:bg-gray-900">
             <div className="py-8 lg:py-16 mx-auto max-w-screen-xl px-4">
-                <h2 className="mb-8 lg:mb-16 text-3xl font-extrabold tracking-tight leading-tight text-center text-gray-900 dark:text-white md:text-4xl">Tous les articles</h2>
+                <h2 className="mb-8 lg:mb-16 text-3xl font-extrabold tracking-tight leading-tight text-center text-gray-900 dark:text-white md:text-4xl">Les derniers articles</h2>
                 <div className="flex flex-wrap -m-4">
                     {posts.map((post) => (
                     <div key={post.slug} className="p-4 md:w-1/3">
