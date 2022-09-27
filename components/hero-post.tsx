@@ -3,9 +3,9 @@ import { Tooltip } from "flowbite-react";
 
 const HeroPost = () => {
   const [subscribeMessage, setSubscribeMessage] = React.useState("Reçois ton cadeau");
-  const [subscribeSuccess, setSubscribeSuccess] = React.useState(0);
+  const [subscribeSuccess, setSubscribeSuccess] = React.useState(false);
   const [subscribeErrorMessage, setSubscribeErrorMessage] = React.useState("");
-  const [subscribeError, setSubscribeError] = React.useState(0);
+  const [subscribeError, setSubscribeError] = React.useState(false);
   const inputRef = useRef(null);
 
   const subscribeUser = async (e) => {
@@ -21,12 +21,12 @@ const HeroPost = () => {
     });
     if(!res.ok) {
       const data = await res.json();
-      setSubscribeError(1);
-      setSubscribeSuccess(0);
+      setSubscribeError(true);
+      setSubscribeSuccess(false);
       setSubscribeErrorMessage(data.error);
     } else {
-      setSubscribeSuccess(1);
-      setSubscribeError(0);
+      setSubscribeSuccess(true);
+      setSubscribeError(false);
       setSubscribeMessage("Cadeau envoyé :)");
     }
   };
