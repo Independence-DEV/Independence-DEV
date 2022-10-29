@@ -6,13 +6,15 @@ const HeroPost = () => {
   const [subscribeSuccess, setSubscribeSuccess] = React.useState(false);
   const [subscribeErrorMessage, setSubscribeErrorMessage] = React.useState("");
   const [subscribeError, setSubscribeError] = React.useState(false);
-  const inputRef = useRef(null);
+  const inputRefEmail = useRef(null);
+  const inputRefName = useRef(null);
 
   const subscribeUser = async (e) => {
     e.preventDefault();
     const res = await fetch('/api/subscribeUser', {
       body: JSON.stringify({
-        email: inputRef.current.value,
+        email: inputRefEmail.current.value,
+        name: inputRefName.current.value,
       }),
       headers: {
         'Content-Type': 'application/json',
@@ -45,9 +47,21 @@ const HeroPost = () => {
                   name="revue-form">
               <div className="flex items-end mb-3">
                 <div className="relative w-full mr-3">
-                  <label htmlFor="member_email"
-                         className="hidden block mb-2 text-sm font-medium text-gray-900 dark:text-gray-300">Email
-                    address</label>
+                  <div className="absolute inset-y-0 left-0 flex items-center pl-3 pointer-events-none">
+                    <svg className="w-4 h-4 text-gray-500 dark:text-gray-400" fill="currentColor" viewBox="0 0 448 512"
+                         xmlns="http://www.w3.org/2000/svg">
+                      <path d="M224 256c70.7 0 128-57.3 128-128S294.7 0 224 0S96 57.3 96 128s57.3 128 128 128zm-45.7 48C79.8 304 0 383.8 0 482.3C0 498.7 13.3 512 29.7 512H418.3c16.4 0 29.7-13.3 29.7-29.7C448 383.8 368.2 304 269.7 304H178.3z"></path>
+                    </svg>
+                  </div>
+                  <input
+                      className={
+                        subscribeError ? "revue-form-field bg-gray-50 border border-red-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full pl-10 p-2.5 dark:bg-gray-700 dark:border-red-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+                            : subscribeSuccess ? "revue-form-field bg-gray-50 border border-green-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full pl-10 p-2.5 dark:bg-gray-700 dark:border-green-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+                                : "revue-form-field bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full pl-10 p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+                      }
+                      placeholder="Ton nom..." type="text" name="member[name]" id="member_name" ref={inputRefName}/>
+                </div>
+                <div className="relative w-full mr-3">
                   <div className="absolute inset-y-0 left-0 flex items-center pl-3 pointer-events-none">
                     <svg className="w-5 h-5 text-gray-500 dark:text-gray-400" fill="currentColor" viewBox="0 0 20 20"
                          xmlns="http://www.w3.org/2000/svg">
@@ -61,11 +75,11 @@ const HeroPost = () => {
                           : subscribeSuccess ? "revue-form-field bg-gray-50 border border-green-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full pl-10 p-2.5 dark:bg-gray-700 dark:border-green-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
                           : "revue-form-field bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full pl-10 p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
                       }
-                      placeholder="Ton adresse e-mail..." type="email" name="member[email]" id="member_email" ref={inputRef}/>
+                      placeholder="Ton adresse e-mail..." type="email" name="member[email]" id="member_email" ref={inputRefEmail}/>
                 </div>
                 <button type="submit"
                         disabled={subscribeSuccess}
-                      className={ subscribeSuccess ? "whitespace-nowrap inline-flex items-center py-2.5 px-3 ml-2 text-sm font-medium text-white bg-green-700 rounded-lg border border-green-700 hover:bg-green-800 focus:ring-4 focus:outline-none focus:ring-green-300 dark:bg-green-600 dark:hover:bg-green-700 dark:focus:ring-green-800" : "whitespace-nowrap inline-flex items-center py-2.5 px-3 ml-2 text-sm font-medium text-white bg-blue-700 rounded-lg border border-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800" } >
+                      className={ subscribeSuccess ? "whitespace-nowrap inline-flex items-center py-2.5 px-3 text-sm font-medium text-white bg-green-700 rounded-lg border border-green-700 hover:bg-green-800 focus:ring-4 focus:outline-none focus:ring-green-300 dark:bg-green-600 dark:hover:bg-green-700 dark:focus:ring-green-800" : "whitespace-nowrap inline-flex items-center py-2.5 px-3 text-sm font-medium text-white bg-blue-700 rounded-lg border border-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800" } >
                   {subscribeMessage}
                   <svg className="ml-1 w-5 h-5" fill="currentColor"
                        viewBox="0 0 512 512" xmlns="http://www.w3.org/2000/svg">

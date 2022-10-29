@@ -1,4 +1,3 @@
-import Link from 'next/link'
 import { useRouter } from "next/router";
 import {Button, Navbar} from "flowbite-react";
 
@@ -17,7 +16,7 @@ const Header = () => {
                   <Navbar.Collapse>
                       <Navbar.Link href="/" active={router.pathname == "/" ? true : false}>Accueil</Navbar.Link>
                       <Navbar.Link href="/blog" active={router.pathname == "/blog" ? true : false}>Le blog</Navbar.Link>
-                      <Navbar.Link href="https://formations.independence-dev.com/" >Formations</Navbar.Link>
+                      <Navbar.Link href="https://formations.independence-dev.com/">Formations</Navbar.Link>
                   </Navbar.Collapse>
               </Navbar>
       </header>
