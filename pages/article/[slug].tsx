@@ -5,12 +5,13 @@ import PostBody from '../../components/post-body'
 import Header from '../../components/header'
 import PostHeader from '../../components/post-header'
 import Layout from '../../components/layout'
-import { getPostBySlug, getAllPosts } from '../../lib/api'
+import { getArticleBySlug, getAllArticles } from '../../lib/api'
 import PostTitle from '../../components/post-title'
 import Head from 'next/head'
 import markdownToHtml from '../../lib/markdownToHtml'
 import type PostType from '../../interfaces/post'
 import Formation from "../../components/formation";
+import ArticleHeader from "../../components/article-header";
 
 type Props = {
   post: PostType
@@ -29,7 +30,7 @@ export default function Post({ post }: Props) {
           <PostTitle>Loading…</PostTitle>
         ) : (
           <>
-            <PostHeader
+            <ArticleHeader
                 title={post.title}
                 coverImage={post.coverImage}
                 date={post.date}
@@ -64,7 +65,7 @@ type Params = {
 }
 
 export async function getStaticProps({ params }: Params) {
-  const post = getPostBySlug(params.slug, [
+  const post = getArticleBySlug(params.slug, [
     'title',
     'date',
     'slug',
@@ -87,7 +88,7 @@ export async function getStaticProps({ params }: Params) {
 }
 
 export async function getStaticPaths() {
-  const posts = getAllPosts(['slug'])
+  const posts = getAllArticles(['slug'])
 
   return {
     paths: posts.map((post) => {
