@@ -51,7 +51,7 @@ const Subscribe = () => {
                         }
                         placeholder="Ton nom..." type="text" name="member[name]" id="member_name" ref={inputRefName}/>
                 </div>
-                <div className="relative w-full mr-3 mb-5">
+                <div className="relative w-full mr-3 mb-1">
                     <div className="absolute inset-y-0 left-0 flex items-center pl-3 pointer-events-none">
                         <svg className="w-5 h-5 text-gray-500 dark:text-gray-400" fill="currentColor" viewBox="0 0 20 20"
                              xmlns="http://www.w3.org/2000/svg">
@@ -66,6 +66,9 @@ const Subscribe = () => {
                                     : "revue-form-field bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full pl-10 p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
                         }
                         placeholder="Ton adresse e-mail..." type="email" name="member[email]" id="member_email" ref={inputRefEmail}/>
+                </div>
+                <div className="text-sm font-medium revue-form-footer dark:text-gray-300 mb-3">
+                    Et une petite surprise en plus pour toi :) 🎁
                 </div>
                 <button type="submit"
                         disabled={subscribeSuccess}
