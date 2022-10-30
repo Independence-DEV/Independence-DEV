@@ -6,34 +6,20 @@ export default async (req, res) => {
     }
 
     try {
-        const AUDIENCE_ID = process.env.MAILCHIMP_AUDIENCE_ID;
-        const API_KEY = process.env.MAILCHIMP_API_KEY;
-        const DATACENTER = process.env.MAILCHIMP_API_SERVER;
-        let data = {};
+        let data = "";
         if (!name) {
-            data = {
-                email_address: email,
-                status: 'subscribed',
-            };
+            data = "mauticform[formName]=emailcatcher&mauticform[formId]=1&mauticform[email]="+encodeURIComponent(email)
         } else {
-            data = {
-                email_address: email,
-                status: 'subscribed',
-                merge_fields: {
-                    FNAME: name,
-                }
-            };
+            data = "mauticform[formName]=emailcatcher&mauticform[formId]=1&mauticform[f_name]="+encodeURIComponent(name)+"&mauticform[email]="+encodeURIComponent(email)
         }
-
-
+        
         const response = await fetch(
-            `https://${DATACENTER}.api.mailchimp.com/3.0/lists/${AUDIENCE_ID}/members`,
+            `https://go.independence-dev.com/form/submit?formId=1`,
 
             {
-                body: JSON.stringify(data),
+                body: data,
                 headers: {
-                    Authorization: `apikey ${API_KEY}`,
-                    'Content-Type': 'application/json',
+                    'Content-Type': 'application/x-www-form-urlencoded',
                 },
                 method: 'POST',
             }
