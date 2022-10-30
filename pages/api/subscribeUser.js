@@ -4,15 +4,13 @@ export default async (req, res) => {
     if (!email) {
         return res.status(400).json({ error: 'L\'e-mail est obligatoire' });
     }
+    if (!name) {
+        return res.status(400).json({ error: 'Le nom est obligatoire' });
+    }
 
     try {
-        let data = "";
-        if (!name) {
-            data = "mauticform[formName]=emailcatcher&mauticform[formId]=1&mauticform[email]="+encodeURIComponent(email)
-        } else {
-            data = "mauticform[formName]=emailcatcher&mauticform[formId]=1&mauticform[f_name]="+encodeURIComponent(name)+"&mauticform[email]="+encodeURIComponent(email)
-        }
-        
+        let data = "mauticform[formName]=emailcatcher&mauticform[formId]=1&mauticform[f_name]="+encodeURIComponent(name)+"&mauticform[email]="+encodeURIComponent(email)
+
         const response = await fetch(
             `https://go.independence-dev.com/form/submit?formId=1`,
 
