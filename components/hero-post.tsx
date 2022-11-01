@@ -42,7 +42,7 @@ const HeroPost = () => {
               La période actuelle que connait l'univers de la crypto (Bear Market) est le parfait moment pour monter en compétences avant le prochain Bull Market pour ne louper aucune opportunité.<br/>
               Rendez-vous de l'autre coté 🚀
             </p>
-            <h2 className="max-w-xl mb-4 text-xl font-extrabold leading-none md:text-2xl xl:text-3xl dark:text-white">Le guide complet pour débuter ✨</h2>
+            <h2 className="max-w-xl mb-4 text-xl font-extrabold leading-none md:text-2xl xl:text-3xl dark:text-white">Le guide ultime du Web3 ✨</h2>
             <form onSubmit={subscribeUser} id="revue-form"
                   name="revue-form">
               <div className="flex flex-wrap sm:flex-nowrap items-end mb-3">

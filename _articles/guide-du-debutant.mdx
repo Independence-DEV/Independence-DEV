@@ -1,93 +1,21 @@
 ---
-title: 'Ton guide'
-excerpt: "La première étape de la création d'une dApp est de pouvoir y connecter son Wallet (le plus souvent MetaMask). Je te montre comment le faire dans ton projet React avec la librairie web3.js."
+title: 'Ton ticket vers l'eldorado 💸'
+excerpt: "Tout ce qu'il faut savoir même sans expérience dans le secteur + ta surprise."
 coverImage: '/assets/article/guide-du-debutant/cover.png'
 date: '2022-07-13T05:35:07.322Z'
 youtube: 'https://www.youtube.com/watch?v=X5Nuyw7PGfE'
 ogImage:
   url: '/assets/blog/preview/cover.jpg'
 ---
-## Configuration
-Je vais vous apprendre à créer un bouton qui interagira avec MetaMask pour permettre à l'utilisateur de connecter son portefeuille sur votre application.
+## Video + mind map
 
-`npx create-react-app wallet-connect
-cd wallet-connect`
+La mind map pour devenir développeur Web3 : [https://mm.tt/map/2478968124?t=GvJk2rzafH](https://mm.tt/map/2478968124?t=GvJk2rzafH)
 
-Vérifiez la version de react-scripts dans le package.json, la version doit être 4.0.3 pour être compatible avec web3.js.
+## 🎁Ta surprise en plus pour bien débuter dans la crypto
 
-Exécutez cette ligne de commande pour installer tout ce dont nous avons besoin :
-
-`yarn add web3 react-bootstrap bootstrap react-bootstrap-icons`
-
-Ajouter cette ligne dans index.js :
-
-```javascript
-import 'bootstrap/dist/css/bootstrap.css';
-```
-
-## Fichier final App.js
-```javascript
-import React from 'react';
-import Web3 from "web3";
-import { Button } from 'react-bootstrap';
-import { Wallet } from 'react-bootstrap-icons';
-import './App.css';
-
-class App extends React.Component {
-
-  constructor(props) {
-    super(props);
-    this.state = {
-      web3: null,
-      currentAccount: null,
-      ethBalance: 0,
-      networkId: null
-    };
-  }
-
-  componentDidMount = async () => {
-    this.connectWalletHandler();
-  };
-
-  connectWalletHandler = async () => {
-    try {
-      const web3 = new Web3(Web3.givenProvider);
-      this.setState({ web3: web3});
-      const accounts = await web3.eth.requestAccounts();
-      if (accounts.length !== 0) {
-        const networkId = await web3.eth.net.getId();
-        const ethBalance = await web3.eth.getBalance(accounts[0]);
-        this.setState({currentAccount: accounts[0], ethBalance: Web3.utils.fromWei(ethBalance), networkId: networkId});
-      }
-    } catch (error) {
-      console.error(error);
-    }
-  }
-
-  connectedWallet = () => {
-    return (
-      <div>
-        <p>{parseFloat(this.state.ethBalance).toFixed(4)} ETH</p>
-        <p>{this.state.currentAccount.slice(0,5)+'...'+this.state.currentAccount.slice(38,42)}<br />WALLET CONNECTED</p>
-      </div>
-    )
-  }
-
-  connectWalletButton = () => {
-    return (
-      <Button variant="outline-primary" onClick={() => this.connectWalletHandler()}><Wallet />&ensp;Connect wallet</Button>
-    )
-  }
-
-  render() {
-    return (
-      <div className="App">
-         {this.state.currentAccount ? this.connectedWallet() : this.connectWalletButton()}
-      </div>
-    );
-  }
-}
-
-export default App;
-```
-
+● 100 USDT offert sur Binance ➜ https://www.binance.com/fr/activity/referral/offers/claim?ref=CPA_00E99Z7FID
+● $10 offert sur Coinbase ➜ https://www.coinbase.com/fr/join/bernic_9s
+● -5% sur tes frais de transaction ➜ https://ftx.com/eu/profile#a=156289658
+● Bonus de bienvenue de $20 : https://www.bybit.com/invite?ref=ZMMLNR
+● $25 offert sur Crypto.com avec le code v6qa7t3fhu ➜ https://crypto.com/app/v6qa7t3fhu
+● Sécurise tes cryptos avec une Ledger : https://shop.ledger.com/?r=76de3111c2e7
