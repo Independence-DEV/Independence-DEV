@@ -12,6 +12,7 @@ import markdownToHtml from '../../lib/markdownToHtml'
 import type PostType from '../../interfaces/post'
 import Formation from "../../components/formation";
 import ArticleHeader from "../../components/article-header";
+import Iframe from "react-iframe";
 
 type Props = {
   post: PostType
@@ -46,6 +47,13 @@ export default function Post({ post }: Props) {
                 </title>
                 <meta property="og:image" content={post.coverImage} />
               </Head>
+              <Iframe url={post.youtube}
+                      width="640px"
+                      height="320px"
+                      id=""
+                      className=""
+                      display="block"
+                      position="relative"/>
               <PostBody content={post.content} />
             </article>
               </div>
