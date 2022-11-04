@@ -48,8 +48,8 @@ export default function Post({ post }: Props) {
                 <meta property="og:image" content={post.coverImage} />
               </Head>
               <Iframe url={post.youtube}
-                      width="640px"
-                      height="320px"
+                      width="560px"
+                      height="315px"
                       id=""
                       className=""
                       display="block"
