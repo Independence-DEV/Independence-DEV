@@ -25,7 +25,7 @@ const PostHeader = ({ title, coverImage, date, youtube, excerpt }: Props) => {
                     <p className="mb-2 leading-relaxed">
                         {excerpt}
                     </p>
-                    <a href={youtube} target="_blank" rel="noreferrer">
+                    <a href={youtube} rel="noreferrer">
                         <button className="group bg-gray-800 inline-flex py-2 px-3 rounded-lg items-center hover:bg-gray-700 hover:bg-opacity-50 focus:outline-none dark:hover:text-red-600">
                             <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" className="w-6 h-6"
                                  viewBox="0 0 576 512">
