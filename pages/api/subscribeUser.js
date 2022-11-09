@@ -1,10 +1,20 @@
+function validateEmail(email)
+{
+    const emailRegex = new RegExp(/^[A-Za-z0-9_!#$%&'*+\/=?`{|}~^.-]+@[A-Za-z0-9.-]+$/, "gm");
+    return emailRegex.test(email);
+}
+
+function onlyLettersAndNumbers(name) {
+    return /^[A-Za-z0-9\s]*$/.test(name);
+}
+
 export default async (req, res) => {
     const { email, name } = req.body;
 
-    if (!email) {
+    if (!email || email == "" || !validateEmail(email)) {
         return res.status(400).json({ error: 'L\'e-mail est obligatoire' });
     }
-    if (!name) {
+    if (!name || name == "" || !onlyLettersAndNumbers(name)) {
         return res.status(400).json({ error: 'Le nom est obligatoire' });
     }
 
@@ -34,4 +44,5 @@ export default async (req, res) => {
     } catch (error) {
         return res.status(500).json({ error: error.message || error.toString() });
     }
+    return res.status(500).json({ error: error.message || error.toString() });
 };
