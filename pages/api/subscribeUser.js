@@ -1,7 +1,15 @@
+import validate from 'deep-email-validator'
+
 function validateEmail(email)
 {
+
     const emailRegex = new RegExp(/^[A-Za-z0-9_!#$%&'*+\/=?`{|}~^.-]+@[A-Za-z0-9.-]+$/, "gm");
-    return emailRegex.test(email);
+    if (!emailRegex.test(email)) return false;
+    else {
+        let domainEmail = email.split("@");
+        if(domainEmail[1] == "dpvmx.com") return false;
+        else return true;
+    }
 }
 
 function onlyLettersAndNumbers(name) {
@@ -16,6 +24,19 @@ export default async (req, res) => {
     }
     if (!name || name == "" || !onlyLettersAndNumbers(name)) {
         return res.status(400).json({ error: 'Le nom est obligatoire' });
+    }
+
+    const valid = await validate({
+        email: email,
+        sender: 'contact@independence-dev.com',
+        validateRegex: true,
+        validateMx: true,
+        validateTypo: true,
+        validateDisposable: true,
+        validateSMTP: false,
+    });
+    if(!valid.valid){
+        return res.status(400).json({ error: valid.reason });
     }
 
     try {
