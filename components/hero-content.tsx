@@ -19,7 +19,7 @@ function HeroContent() {
                         <p className='mt-4 text-lg sm:text-xl'>
                             La période actuelle que connait l'univers de la crypto (Bear Market) est le <span className='text-yellow-400'>parfait moment</span> pour monter en compétences avant le prochain Bull Market pour ne louper aucune <span className='text-yellow-400'>opportunité</span>.
                             <br/>
-                            Je t'offre leLe guide ultime du Web3. <span className='text-yellow-400'>Tout ce qu'il faut savoir</span> même sans expérience dans le secteur.
+                            Je t'offre le guide ultime du Web3. <span className='text-yellow-400'>Tout ce qu'il faut savoir</span> même sans expérience dans le secteur.
                         </p>
                         <Subscribe />
                     </div>
