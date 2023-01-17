@@ -38,9 +38,12 @@ const HeroPost = () => {
           <div className="mr-auto place-self-center lg:col-span-7">
             <h1 className="max-w-2xl mb-4 text-4xl font-extrabold leading-none md:text-5xl xl:text-6xl dark:text-white">Deviens Développeur Web3</h1>
             <p className="max-w-2xl mb-6 font-light text-gray-500 lg:mb-8 md:text-lg md:leading-relaxed lg:text-xl lg:leading-relaxed dark:text-gray-400 leading-relaxed">
-              Je m'appelle Geoffrey, je suis développeur Web depuis plus de 6 ans et ai basculé à 100% sur le dev Web3 depuis 1 an.<br/>
-              La période actuelle que connait l'univers de la crypto (Bear Market) est le parfait moment pour monter en compétences avant le prochain Bull Market pour ne louper aucune opportunité.<br/>
-              Rendez-vous de l'autre coté 🚀
+            Vous êtes prêt à plonger dans le monde passionnant du développement web3 ?
+            Nous sommes ravis de vous accueillir sur notre site, votre destination ultime pour devenir un développeur Web3 expérimenté.
+            Le Web3, c'est l'avenir de l'Internet et il est crucial de comprendre comment utiliser les technologies blockchain pour créer des applications décentralisées qui changent le monde.
+            Nous vous offrons les meilleures ressources et les outils pour vous aider à atteindre vos objectifs de développement.
+            Alors, êtes-vous prêts à construire des applications innovantes qui défient les limites et à devenir un leader dans l'évolution du Web3 ?
+            Commencez votre parcours d'apprentissage avec nous maintenant.
             </p>
             <h2 className="max-w-xl mb-4 text-xl font-extrabold leading-none md:text-2xl xl:text-3xl dark:text-white">Le guide ultime du Web3 ✨</h2>
             <form onSubmit={subscribeUser} id="revue-form"
